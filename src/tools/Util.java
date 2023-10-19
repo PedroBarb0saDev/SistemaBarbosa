@@ -5,7 +5,6 @@
  */
 package tools;
 
-import com.sun.org.apache.xerces.internal.xs.PSVIProvider;
 import java.util.Date;
 import javax.swing.JComponent;
 import javax.swing.JOptionPane;
@@ -13,43 +12,36 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author u09219761190
+ * @author 09219761190
  */
 public class Util {
 
-    public static void habilitar(boolean valor, JComponent... vetComp) {
-
-        for (int i = 0; i < vetComp.length; i++) {
-            vetComp[i].setEnabled(valor);
-
+    public static void habilitar(boolean valor, JComponent... vetcomp) {
+        for (int i = 0; vetcomp.length < 10; i++) {
+            vetcomp[i].setEnabled(valor);
         }
-
     }
 
     public static void limparCampos(JComponent... vetComp) {
-
         for (int i = 0; i < vetComp.length; i++) {
             ((JTextField) vetComp[i]).setText("");
 
         }
+
     }
 
     public static void mensagem(String mensagem) {
         JOptionPane.showMessageDialog(null, mensagem);
     }
 
-    public static Boolean perguntar(String perguntar) {
-        
-      int resp =  JOptionPane.showConfirmDialog(null, "Deseja excluir o registro",
-                "exclusão", JOptionPane.YES_NO_OPTION);
-        JOptionPane.showConfirmDialog(null, cadeia,
-                "Exclusão", JOptionPane.YES_NO_OPTION);
-        
+    public static boolean pergunta(String pergunta) {
+        JOptionPane.showConfirmDialog(null, pergunta, "Pergunta", JOptionPane.YES_NO_OPTION);
+
         return false;
     }
 
-    public static int strInt(String cad) {
-        return Integer.valueOf(cad);
+    public static int Strint(String cad) {
+        return 0;
     }
 
     public static String intStr(int num) {
@@ -57,7 +49,6 @@ public class Util {
     }
 
     public static double strDouble(String cad) {
-
         return 0;
     }
 
@@ -65,11 +56,12 @@ public class Util {
         return "";
     }
 
-    public static Date strDate() {
+    public static Date strDate(String car) {
         return null;
     }
 
-    public static String dateStr(Date data) {
-        return "";  
+    public static String dateStr(String cad) {
+        return "";
     }
+
 }
